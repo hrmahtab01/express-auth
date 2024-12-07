@@ -35,7 +35,7 @@ app.post("/login", async (req, res) => {
       }
       if (result) {
       const token = jwt.sign({ email }, process.env.PRV_TOKEN , { expiresIn: "1h" });
-        console.log(token);
+        
         
         res.status(200).send({msg:"Login successfully" ,token});
       } else {
